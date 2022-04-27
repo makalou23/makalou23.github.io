@@ -1,0 +1,22 @@
+#results {
+    display:block;
+  }
+
+  h1 {
+      color: blueviolet;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  div.pt-4 > .form-group > .input-group > .input-group-addon {
+      font: bold;
+      color: black;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  
+  h5 {
+      color: blueviolet;
+  }
+
+  
+ 
