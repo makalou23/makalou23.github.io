@@ -48,6 +48,16 @@ function handleCellClick(e) {
 	}
 }
 
+function setBoardHoverClass() {
+	boardElement.classList.remove(PLAYER_X_CLASS)
+	boardElement.classList.remove(PLAYER_O_CLASS)
+	if (isPlayer_O_Turn) {
+		boardElement.classList.add(PLAYER_O_CLASS)
+	} else {
+		boardElement.classList.add(PLAYER_X_CLASS)
+	}
+}
+
 function endGame(draw) {
   if (draw) {
       winningMessageTextElement.innerText = "It's a draw!"
