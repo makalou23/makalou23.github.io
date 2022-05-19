@@ -66,6 +66,14 @@ function endGame(draw) {
   }
 }
 
+function checkWin(currentClass) {
+	return WINNING_COMBINATIONS.some(combination => {
+		return combination.every(index => {
+			return cellElements[index].classList.contains(currentClass)
+		})
+	})
+}
+
 function isDraw() {
 	return [...cellElements].every(cell => {
 		return cell.classList.contains(PLAYER_X_CLASS) || cell.classList.contains(PLAYER_O_CLASS)
