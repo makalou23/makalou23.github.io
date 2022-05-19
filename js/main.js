@@ -59,7 +59,7 @@ function endGame(draw) {
 function isDraw() {
 	return [...cellElements].every(cell => {
 		return cell.classList.contains(PLAYER_X_CLASS) || cell.classList.contains(PLAYER_O_CLASS)
-	}
+	})
 }
 
 function placeMark(cell, currentClass) {
