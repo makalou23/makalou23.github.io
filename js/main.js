@@ -48,6 +48,23 @@ function handleCellClick(e) {
 	}
 }
 
+function checkWin(currentClass) {
+	return WINNING_COMBINATIONS.some(combination => {
+		return combination.every(index => {
+			return cellElements[index].classList.contains(currentClass)
+		})
+	})
+}
+
+function placeMark(cell, currentClass) {
+	cell.classList.add(currentClass)
+}
+
+function swapTurns() {
+	isPlayer_O_Turn = !isPlayer_O_Turn
+}
+
+
 function isDraw() {
 	return [...cellElements].every(cell => {
 		return cell.classList.contains(PLAYER_X_CLASS) || cell.classList.contains(PLAYER_O_CLASS)
@@ -72,20 +89,3 @@ function endGame(draw) {
   }
 }
 
-function checkWin(currentClass) {
-	return WINNING_COMBINATIONS.some(combination => {
-		return combination.every(index => {
-			return cellElements[index].classList.contains(currentClass)
-		})
-	})
-}
-
-
-
-function placeMark(cell, currentClass) {
-	cell.classList.add(currentClass)
-}
-
-function swapTurns() {
-	isPlayer_O_Turn = !isPlayer_O_Turn
-}
