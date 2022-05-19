@@ -1,18 +1,26 @@
 
 
+h1 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #421414;
+}
+
 :root {
 	--cell-size: 100px;
 
-	--color: #81c3fd; /* for hover */
-	--color-set: #0275d8; /* when set */
+	--color: #421414; /* for hover */
+	--color-set: #031f38; /* when set */
 	--l: 10px; /* X line-width */
 }
 
 body {
 	margin: 0;
+    background-color: rgb(212, 178, 126);
 }
 
 .board {
+    position: fixed;
 	width: 100vw;
 	height: 100vh;
 	display: grid;
@@ -26,7 +34,7 @@ body {
 .cell {
 	width: var(--cell-size);
 	height: var(--cell-size);
-	border: 1px solid black;
+	border: 1px solid rgb(99, 85, 160);
 	display: flex;
 	justify-content: center;
 	align-items: center;
